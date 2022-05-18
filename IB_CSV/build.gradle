@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.bookmap.com/maven2/releases/"
+    }
+}
+
+eclipse.classpath.downloadJavadoc = true
+
+dependencies {
+    compileOnly group: 'com.bookmap.api', name: 'api-core', version: '7.2.0.16';
+    compileOnly group: 'com.bookmap.api', name: 'api-simplified', version: '7.2.0.16';
+    
+   // implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+}
